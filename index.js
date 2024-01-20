@@ -1,6 +1,5 @@
 'use strict';
 
-var config = new (require('v-conf'))();
 var crypto = require('crypto');
 var fs = require('fs-extra');
 var http = require('http');
@@ -9,8 +8,6 @@ var pTimer = require('./pausableTimer');
 var socket = io.connect('http://localhost:3000');
 var lastfm = require("simple-lastfm");
 var libQ = require('kew');
-var net = require('net');
-var os = require('os');
 
 var blacklistedServices; // = ['webradio'];
 var scrobbleThresholdSong = 500;  // as fraction of the song duration
